@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+
+aws:
+  paramstore:
+    name: demo-aws-secrets
+    prefix: /config
+    enabled: true
+    defaultContext: application
+    profileSeparator: _
+    failFast: true
+  secretsmanager:
+    name: demo-aws-secrets
+    prefix: /secret
+    defaultContext: demo-aws-secrets
+    profileSeparator: _
+    failFast: true
+    enabled: true
+
+cloud:
+  aws:
+    region:
+      static: us-east-1
+
+# Parameter aws example: /config/demo-aws-secrets/application.baseUri
+# Secrets manager example: /secret/demo-aws-secrets

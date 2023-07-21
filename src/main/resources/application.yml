@@ -1,0 +1,18 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: demo-aws-secrets
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: env
+
+app-credentials:
+  client-id: ${clientId}
+
+http:
+  base-uri: ${application.baseUri}
