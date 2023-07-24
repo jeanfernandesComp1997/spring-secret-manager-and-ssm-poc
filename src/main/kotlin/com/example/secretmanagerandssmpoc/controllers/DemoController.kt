@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 class DemoController {
 
     @GetMapping("/secret")
-    suspend fun getScret(
+    suspend fun getSecret(
         @Value("\${app-credentials.client-id}") clientId: String
     ): ResponseEntity<String> {
         return ResponseEntity.ok(clientId)
