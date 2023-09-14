@@ -14,15 +14,19 @@ class DemoController {
         @Value("\${app-credentials.client-secret}") clientSecret: String
     ): ResponseEntity<Any> {
         return ResponseEntity.ok(object {
-            val clientId = clientId
-            val clientSecret = clientSecret
+            val client_id = clientId
+            val client_secret = clientSecret
         })
     }
 
     @GetMapping("/parameter")
     suspend fun getBaseUri(
-        @Value("\${http.base-uri}") baseUri: String
-    ): ResponseEntity<String> {
-        return ResponseEntity.ok(baseUri)
+        @Value("\${http.base-uri}") baseUri: String,
+        @Value("\${http.api-gateway-id}") gatewayId: String
+    ): ResponseEntity<Any> {
+        return ResponseEntity.ok(object {
+            val base_uri = baseUri
+            val gateway_id = gatewayId
+        })
     }
 }
