@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: demo-aws-secrets
+  config:
+    import: aws-secretsmanager:/secret/demo-aws-secrets
 
 management:
   endpoints:
@@ -13,6 +15,7 @@ management:
 
 app-credentials:
   client-id: ${clientId}
+  client-secret: ${clientSecret}
 
 http:
   base-uri: ${application.baseUri}

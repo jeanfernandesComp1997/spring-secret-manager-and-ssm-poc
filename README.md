@@ -4,3 +4,6 @@
 - Parameter name on AWS example: /config/demo-aws-secrets/application.baseUri
 
 AWS Load variables on /src/main/resourcers/bootstrap.yml
+
+For running without bootstrap use:
+```-Dspring.profiles.active=dev```

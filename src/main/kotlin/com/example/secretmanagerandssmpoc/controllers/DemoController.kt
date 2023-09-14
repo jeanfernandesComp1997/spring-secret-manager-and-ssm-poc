@@ -10,9 +10,13 @@ class DemoController {
 
     @GetMapping("/secret")
     suspend fun getSecret(
-        @Value("\${app-credentials.client-id}") clientId: String
-    ): ResponseEntity<String> {
-        return ResponseEntity.ok(clientId)
+        @Value("\${app-credentials.client-id}") clientId: String,
+        @Value("\${app-credentials.client-secret}") clientSecret: String
+    ): ResponseEntity<Any> {
+        return ResponseEntity.ok(object {
+            val clientId = clientId
+            val clientSecret = clientSecret
+        })
     }
 
     @GetMapping("/parameter")

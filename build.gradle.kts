@@ -26,7 +26,7 @@ dependencies {
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-	implementation("org.springframework.cloud:spring-cloud-starter-bootstrap")
+	// implementation("org.springframework.cloud:spring-cloud-starter-bootstrap")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("io.awspring.cloud:spring-cloud-starter-aws-secrets-manager-config:2.4.4")
 	implementation("io.awspring.cloud:spring-cloud-starter-aws-parameter-store-config:2.4.4")

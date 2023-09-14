@@ -11,7 +11,7 @@ aws:
     prefix: /secret
     defaultContext: demo-aws-secrets
     profileSeparator: _
-    failFast: true
+    failFast: false
     enabled: true
 
 cloud:
